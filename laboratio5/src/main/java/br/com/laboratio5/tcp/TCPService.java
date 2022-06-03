@@ -44,7 +44,7 @@ public class TCPService {
 				}
 				for (String string : list) {
 					String[] spli2 = string.split(",");
-					UsuariosModel m = new UsuariosModel(Long.valueOf(spli2[0]),spli2[1], Long.valueOf(spli2[2]));
+					UsuariosModel m = new UsuariosModel(Long.valueOf(spli2[0]),spli2[1], Long.valueOf(spli2[2]), false);
 					usuarios.add(m);
 				}
 			}
@@ -84,7 +84,7 @@ public class TCPService {
 			if (line.equals(":")) {
 				return null;
 			} else {
-				mensagem = new UsuarioMensagemModel(Long.valueOf(splt[0]), getName(Long.valueOf(splt[0])), splt[1]);
+				mensagem = new UsuarioMensagemModel(Long.valueOf(splt[0]), getName(Long.valueOf(splt[0])), splt[1], false);
 			}
 			System.out.println(line);
 

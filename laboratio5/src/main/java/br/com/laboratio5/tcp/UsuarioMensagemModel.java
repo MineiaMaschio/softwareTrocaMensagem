@@ -5,12 +5,14 @@ public class UsuarioMensagemModel {
 	private Long usuarioId;
 	private String nome;
 	private String mensagem;
+	private boolean external;
 
-	public UsuarioMensagemModel(Long usuarioId, String nome, String mensagem) {
+	public UsuarioMensagemModel(Long usuarioId, String nome, String mensagem, boolean external) {
 		super();
 		this.usuarioId = usuarioId;
 		this.nome = nome;
 		this.mensagem = mensagem;
+		this.external = external;
 	}
 
 	public Long getUsuarioId() {
@@ -35,6 +37,14 @@ public class UsuarioMensagemModel {
 
 	public void setMensagem(String mensagem) {
 		this.mensagem = mensagem;
+	}
+
+	public boolean isExternal() {
+		return external;
+	}
+
+	public void setExternal(boolean external) {
+		this.external = external;
 	}
 
 }

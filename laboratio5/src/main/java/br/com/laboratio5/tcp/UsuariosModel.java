@@ -4,12 +4,14 @@ public class UsuariosModel {
 	private Long usuarioId;
 	private String nome;
 	private Long vitorias;
+	private boolean external;
 
-	public UsuariosModel(Long usuarioId, String nome, Long vitorias) {
+	public UsuariosModel(Long usuarioId, String nome, Long vitorias, boolean external) {
 		super();
 		this.usuarioId = usuarioId;
 		this.nome = nome;
 		this.vitorias = vitorias;
+		this.external = external;
 	}
 
 	public Long getUsuarioId() {
@@ -35,6 +37,13 @@ public class UsuariosModel {
 	public void setVitorias(Long vitorias) {
 		this.vitorias = vitorias;
 	}
-	
-	
+
+	public boolean isExternal() {
+		return external;
+	}
+
+	public void setExternal(boolean external) {
+		this.external = external;
+	}
+
 }
