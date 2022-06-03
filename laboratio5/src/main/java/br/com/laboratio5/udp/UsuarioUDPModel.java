@@ -1,15 +1,13 @@
-package br.com.laboratio5.tcp;
+package br.com.laboratio5.udp;
 
-public class UsuarioMensagemModel {
+public class UsuarioUDPModel {
 
 	private Long usuarioId;
-	private String nome;
 	private String mensagem;
 
-	public UsuarioMensagemModel(Long usuarioId, String nome, String mensagem) {
+	public UsuarioUDPModel(Long usuarioId, String mensagem) {
 		super();
 		this.usuarioId = usuarioId;
-		this.nome = nome;
 		this.mensagem = mensagem;
 	}
 
@@ -19,14 +17,6 @@ public class UsuarioMensagemModel {
 
 	public void setUsuarioId(Long usuarioId) {
 		this.usuarioId = usuarioId;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
 	}
 
 	public String getMensagem() {

@@ -84,7 +84,7 @@ public class TCPService {
 			if (line.equals(":")) {
 				return null;
 			} else {
-				mensagem = new UsuarioMensagemModel(Long.valueOf(splt[0]), splt[1]);
+				mensagem = new UsuarioMensagemModel(Long.valueOf(splt[0]), getName(Long.valueOf(splt[0])), splt[1]);
 			}
 			System.out.println(line);
 
@@ -100,4 +100,56 @@ public class TCPService {
 		return mensagem;
 	}
 
+	private String getName(Long userId) {
+		String name = "";
+		switch (userId.intValue()) {
+		case 9240:
+			name = "Bruno Giovani Bressanini Cavalheiro";
+			break;
+		case 6152:
+			name = "Bruno Ricardo Junkes";
+			break;
+		case 1636:
+			name = "Christyelen Kramel";
+			break;
+		case 4268:
+			name = "Douglas Royes";
+			break;
+		case 2222:
+			name = "Francisco Adell Péricas";
+			break;
+		case 5280:
+			name = "Guilherme Barth";
+			break;
+		case 1158:
+			name = "Hélio Potelicki";
+			break;
+		case 4038:
+			name = "Igor Christofer Eisenhut";
+			break;
+		case 5562:
+			name = "Luiz Augusto Kuhn";
+			break;
+		case 6364:
+			name = "Minéia Maschio";
+			break;
+		case 6408:
+			name = "Rennã Munlo Tiedt";
+			break;
+		case 1145:
+			name = "Thomas Ricardo Reinke";
+			break;
+		case 8868:
+			name = "Yuri Matheus Hartmann";
+			break;
+		case 6806:
+			name = "Éliton Lunardi";
+			break;
+		default:
+			break;
+		}
+		
+		return name;
+	}
+	
 }

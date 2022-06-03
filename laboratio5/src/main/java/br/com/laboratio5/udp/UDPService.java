@@ -7,12 +7,10 @@ import java.net.InetAddress;
 
 import org.springframework.stereotype.Service;
 
-import br.com.laboratio5.tcp.UsuarioMensagemModel;
-
 @Service
 public class UDPService {
 
-	public void enviarMensagem(UsuarioMensagemModel mensagem) throws IOException {
+	public void enviarMensagem(UsuarioUDPModel mensagem) throws IOException {
 		DatagramSocket ds = new DatagramSocket();
 
 		InetAddress ip = InetAddress.getByName("larc.inf.furb.br");
